@@ -13,6 +13,10 @@ function deleteLast() {
 
 function calculateResult() {
     let expression = document.getElementById('result').value;
+
+    // Replace 'π' with the numerical value of Math.PI
+    expression = expression.replace(/π/g, Math.PI);
+
     try {
         let result = eval(expression);
         document.getElementById('result').value = result;
